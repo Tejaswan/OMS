@@ -1,0 +1,73 @@
+<div class="modal-header">
+  <h4 class="modal-title">Order Form</h4>
+  <button type="button" class="close" aria-label="Close"
+   (click)="activeModal.dismiss('Cross click')">
+   <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <div class="modal-boy">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="username">Email</label>
+            <input type="text" 
+              class="form-control"
+              formControlName="customer" />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="username">Order status</label>
+            <br>
+              <select name="order_status" formControlName="order_status" style=" width: 217px;height: 34px;background-color: white;">
+                <option value="Recevied">Recevied</option>
+                <option value="Failed">Failed</option>
+                <option value="Dispatched">Dispatched</option>
+                <option value="Assigned to courier person">Assigned to courier person</option>
+              </select>
+          </div>
+        </div>
+      </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="username">Paid</label>
+              <br>
+              <select name="Paid" formControlName="paid" style=" width: 217px;height: 34px;background-color: white;">
+                <option value="Paid">Paid</option>
+                <option value="Unpaid">Unpaid</option>
+              </select> 
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="username">Price</label>
+              <input type="text" 
+                class="form-control"
+                formControlName="price" />
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="username">Payment method</label>
+              <br>
+              <select name="payment_method" formControlName="payment_method" style=" width: 217px;height: 34px;background-color: white;">
+                <option value="COD">COD</option>
+                <option value="PAYTM">PAYTM</option>
+                <option value="VISA">VISA</option>
+              </select>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-success">
+      Submit Form
+    </button>
+  </div>
+</form>
