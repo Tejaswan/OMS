@@ -1,0 +1,34 @@
+td.rece_color {
+    color: #1acc43;
+}
+td.fa_color {
+    color: red;
+}
+td.dis_color {
+    color: orange;
+}
+td.as_color {
+    color: #007bff;
+}
+th.order_id {
+    color: #17a2b8;
+}
+.neworder {
+	float: right;
+    margin: 10px 10px 10px 10px;
+}
+.f14 {
+	font-size: 14px;
+}
+td {
+    padding: 10px 10px 0px 10px !important;
+}
+.editbutton, .deletebutton {
+	padding: 3px 6px 3px 6px;
+    font-size: 14px;
+    margin-right: 12px;
+}
+.ordertable {
+	width: 93%;
+    margin: auto;
+}

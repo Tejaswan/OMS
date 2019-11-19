@@ -1,0 +1,47 @@
+<div class="row firstrow">
+  <div class="col-md-6 loginright">
+    <div class="row firstrow">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6" class="welcomecard">
+        <div class="cardcss">
+          <div class="welcome">Welcome to OMS</div>
+          <br>
+          <form [formGroup]="inputsForm" (ngSubmit)="onSubmit()"> 
+          	<div class="form-group">
+          	 <input type="text" formControlName="username" class="form-control"  placeholder="Username"  [ngClass]="{ 'is-invalid': submitted &amp;&amp; inputsForm.controls.username.errors }"/>
+          	  <div *ngIf="submitted &amp;&amp; inputsForm.controls.username.errors" class="text-danger">
+                <div *ngIf="inputsForm.controls.username.errors.required">Username is required</div>
+              </div>
+            </div>
+            <div class="form-group">
+          	  <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted &amp;&amp; inputsForm.controls.password.errors }"  />
+              <div *ngIf="submitted &amp;&amp; inputsForm.controls.password.errors" class="text-danger">
+                <div *ngIf="inputsForm.controls.password.errors.required">Password is required</div>
+                <div *ngIf="inputsForm.controls.password.errors.minlength">Password must be at least 6 characters</div>
+              </div>
+            </div>
+            <br>
+            <div class="form-group">
+          	 <button class="btn btn-primary loginbutton">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 leftpart">
+      <div class="rightcontent">
+        <div class="headingcss">OMS - Order Management System</div>
+        <div class="secondhead">Do not have an account yet?</div>
+        <div>That's awesome! you can login by clicking on the below botton.To skip this next time, you can ask us to remember your login credentials.</div>
+        <br><br>
+        <button class="btn btn-primary">Sign up</button>
+      </div>
+  </div>
+</div>
+
+
+

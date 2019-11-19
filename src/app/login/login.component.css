@@ -1,0 +1,46 @@
+.cardcss {
+    box-shadow: 0px 2px 2px 2px #808080ab;
+    padding: 23px 58px 50px 46px;
+    width: 404px;
+    height: 273px;
+}
+.leftpart {
+	background: #004085;
+    color: white;
+    height: 754px;
+}
+.welcome {
+	font-weight: bold;
+    font-size: 24px;
+    color: #004085;
+}
+.create {
+	font-size: 13px;
+    margin: 10px 0px 20px 0px;
+}
+.loginright {
+	background: #8080802b;
+	height: 754px;
+}
+.welcomecard, .rightcontent {
+	margin-top: 191px;
+}
+.firstrow {
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+}
+.loginbutton {
+	float: right;
+}
+.headingcss {
+	font-weight: bold;
+    font-size: 30px;
+}
+.secondhead {
+	font-weight: bold;
+    font-size: 19px;
+    margin: 10px 0px 15px 0px;
+}
+.rightcontent {
+    padding: 20px 42px 20px 42px;
+}

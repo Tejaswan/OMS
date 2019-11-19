@@ -1,0 +1,35 @@
+<button class="btn btn-primary neworder" (click)="openFormModal()">New Order</button>
+<table class="table table-striped ordertable">
+  <thead>
+    <tr>
+      <th scope="col" class="f14">Order Id</th>
+      <th scope="col" class="f14">Date</th>
+      <th scope="col" class="f14">Customer</th>
+      <th scope="col" class="f14">Order Status</th>
+      <th scope="col" class="f14">Paid</th>
+      <th scope="col" class="f14">Payment Method</th>
+      <th scope="col" class="f14">Price</th>
+      <th scope="col" class="f14">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orderdetails">
+      <th scope="row" class="order_id"><a>#{{ order.order_id }}</a></th>
+      <td><!-- <ngb-highlight [result]="order.order_date" [term]="service.searchTerm"></ngb-highlight> -->{{order.order_date}}</td>
+      <td><!-- <ngb-highlight [result]="order.customer" [term]="service.searchTerm"></ngb-highlight> -->{{order.customer}}</td>
+      <td [ngClass]="{
+      'rece_color':order.order_status === 'Recevied',
+      'fa_color':order.order_status === 'Failed',
+      'dis_color':order.order_status === 'Dispatched',
+      'as_color':order.order_status === 'Assigned to courier person'
+    }"><!-- <ngb-highlight [result]="order.order_status" [term]="service.searchTerm"></ngb-highlight> -->{{order.order_status}}</td>
+      <td><!-- <ngb-highlight [result]="order.paid" [term]="service.searchTerm"></ngb-highlight> -->{{order.paid}}</td>
+      <td><!-- <ngb-highlight [result]="order.payment_method" [term]="service.searchTerm"></ngb-highlight> -->{{order.payment_method}}</td>
+      <td><!-- <ngb-highlight [result]="order.price" [term]="service.searchTerm"></ngb-highlight> -->{{order.price}}</td>
+        <td>
+          <button class="btn btn-primary editbutton" (click)="editOrder(order)">Edit</button>
+          <button class="btn btn-primary deletebutton" (click)="deleteOrder(order)">Delete</button>
+        </td>
+    </tr>
+  </tbody>
+</table>
