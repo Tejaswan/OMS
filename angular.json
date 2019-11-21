@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tour-of-heroes": {
+    "order_management_system": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -63,7 +63,7 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-tour-of-heroes:build"
+            "browserTarget": "order_management_system:build"
           },
           "configurations": {
             "production": {
@@ -115,7 +115,7 @@
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-tour-of-heroes:serve:production"
+              "devServerTarget": "order_management_system:serve:production"
             }
           }
         }

@@ -9,6 +9,8 @@ import { OrderDetailComponent } from './order-detail/order-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalFormComponent } from './modal-form/modal-form.component';
 import { DeleteModalComponent } from './delete-modal/delete-modal.component';
+import { HttpClientModule } from '@angular/common/http';
+import { OrderDetailService } from './shared/order-details.service'
 const STATES = [
   { name: 'orders', url: '/orders', component: OrderDetailComponent },
   { name: 'login', url: '/login', component: LoginComponent }
@@ -26,10 +28,12 @@ const STATES = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
     ReactiveFormsModule,
+    
     UIRouterModule.forRoot({ states: STATES })
   ],
-  providers: [],
+  providers: [OrderDetailService],
   bootstrap: [AppComponent],
   entryComponents: [
   ModalFormComponent,
